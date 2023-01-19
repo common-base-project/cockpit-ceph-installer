@@ -129,6 +129,8 @@ An example of an override file would be
 
 ## Development environment
 ### Hacking on the plugin
+#### 前提需要先安装 [ceph-ansible](https://github.com/ceph/ceph-ansible) 和 ansible
+
 1. Ensure **tcp/9090** is available and accessible on your machine
 2. Install and enable cockpit
 ```
@@ -153,6 +155,15 @@ user specific plugins - so this is where we want to place a symlink.
 cd ~
 mkdir -p .local/share/cockpit
 ln -s <dist directory> ceph-installer
+
+# 将 ceph-ansible 链接添加到 cockpit-ceph-installer 目录的 dist 文件夹
+ln -snf /admin/cockpit-ceph-installer/dist /usr/share/cockpit/cockpit-ceph-installer
+systemctl restart cockpit.socket
+
+# 从 cockpit-ceph-installer 目录的根目录，将 checkrole 组件复制到 ceph-ansible 的工作目录
+cp utils/ansible/checkrole.yml /usr/share/ceph-ansible
+cp utils/ansible/library/ceph_check_role.py /usr/share/ceph-ansible/library/
+
 ```
 *above tested on CentOS7*
 

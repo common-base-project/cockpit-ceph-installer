@@ -43,7 +43,7 @@ export class EnvironmentPage extends React.Component {
         this.installSource = {
             "Red Hat": ["RHCS 4"],
             "ISO": [],
-            "Community": ["14 (Nautilus)", "13 (Mimic)", "12 (Luminous)"],
+            "Community": ["17 (Quincy)", "16 (Pacific)", "15 (Octopus)", "14 (Nautilus)", "13 (Mimic)", "12 (Luminous)"],
             "Distribution": ["13 (Mimic)", "12 (Luminous)"]
         };
         this.installSourceToolTip = "For an ISO install, the image must be in /usr/share/ansible-runner-service/iso\n and have container_file_t SELINUX context";

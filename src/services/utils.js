@@ -46,6 +46,7 @@ export function versionSupportsMetrics(version) {
 }
 
 export function getCephVersionNumber(versionStr) {
+    console.log(versionStr);
     switch (versionStr) {
     case "RHCS 3":
         return "12";
@@ -54,6 +55,9 @@ export function getCephVersionNumber(versionStr) {
     case "12 (Luminous)":
     case "13 (Mimic)":
     case "14 (Nautilus)":
+    case "15 (Octopus)":
+    case "16 (Pacific)":
+    case "17 (Quincy)":
         return versionStr.split(' ')[0];
     }
 }

@@ -24904,7 +24904,7 @@ function injectIntoDevTools(devToolsConfig) {
     // Enables DevTools to append owner stacks to error messages in DEV mode.
     getCurrentFiber:  function () {
       return current;
-    } 
+    }
   }));
 }
 var IsSomeRendererActing$1 = ReactSharedInternals.IsSomeRendererActing;
@@ -32098,7 +32098,7 @@ var EnvironmentPage = /*#__PURE__*/function (_React$Component) {
     _this.installSource = {
       "Red Hat": ["RHCS 4"],
       "ISO": [],
-      "Community": ["14 (Nautilus)", "13 (Mimic)", "12 (Luminous)"],
+      "Community": ["17 (Quincy)", "16 (Pacific)", "15 (Octopus)", "14 (Nautilus)", "13 (Mimic)", "12 (Luminous)"],
       "Distribution": ["13 (Mimic)", "12 (Luminous)"]
     };
     _this.installSourceToolTip = "For an ISO install, the image must be in /usr/share/ansible-runner-service/iso\n and have container_file_t SELINUX context";
